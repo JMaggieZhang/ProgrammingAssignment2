@@ -3,7 +3,7 @@
 ## makeCacheMatrix creates a special "matrix" object that can cache its inverse. 
 ## It contains four functions to 
 ## 1. set -> set the value of the matrix
-## 2. get -> the value of the matrix
+## 2. get -> get the value of the matrix
 ## 3. cacheInverse ->  cache the inverse of the matrix
 ## 4. getInverse ->  get the inverse of the matrix
 
@@ -15,12 +15,12 @@ makeCacheMatrix <- function(x = matrix()) {
          x <<- y
          M << - NULL 
     
-  get <- function () x
+  get <- function() x
   cacheInverse <- function(inverse)  M <<- inverse   ##"inverse" here is to store a value but not to compute
   getInverse <- function() M
   
   ## The following line stores the four functions
-  list(set = set, get = get, setCache = setCache, getCache = getCache)
+  list(set = set, get = get, cacheInverse = cacheInverse, getInverse = getInverse)
 }
 
 
